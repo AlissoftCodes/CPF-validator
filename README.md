@@ -6,6 +6,8 @@ Este é um script simples para validação e formatação de CPF.
 
 <pre>
 <code>
+from cpf_validator import *
+
 cpf = input('Type a CPF: ')
 
 formatted_cpf = cpf_format(cpf)
