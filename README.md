@@ -1,8 +1,9 @@
 # CPF-validator
 Este é um script simples para validação e formatação de CPF.
+This is a simple script to validate and format CPF (Brazilian ID number).
 
 
-# Exemplo de uso:
+# Exemplo de uso (Usage example):
 
 <pre>
 <code>
