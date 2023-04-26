@@ -20,3 +20,5 @@ else:
     print(f'CPF {formatted_cpf} is NOT valid.')
 </code>
 </pre>
+
+# Source: https://github.com/AlissoftCodes/CPF-Module
