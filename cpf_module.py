@@ -1,5 +1,7 @@
-def cpf_validate(cpf):
-
+def cpf_validate(cpf:str) -> bool:
+	"""
+	Returns True if the CPF is valid and False if it's invalid.
+	"""
 	try:
 		cpf = [int(i) for i in f'{int("".join([i for i in cpf if i.isnumeric()])) :011d}']
 	except ValueError:
@@ -35,32 +37,15 @@ def cpf_validate(cpf):
 		return False
 
 
-def cpf_format(cpf):
-	
+def cpf_format(cpf: str) -> str:
+	"""
+	Returns the CPF value in the pattern XXX.XXX.XXX-XX
+	"""
 	try:
 		cpf = int(''.join(i for i in cpf if i.isnumeric()))
 	except ValueError:
 		cpf = 0
-
+	
 	cpf = f'{cpf:011d}'
-	count = 0
-	rounds = 0
-	new_cpf = ''
-	
-	for i in cpf:
-	
-		if len(new_cpf) == 14:
-			break
-		count += 1
-		new_cpf += i
-	
-		if count == 3:
-	
-			if rounds < 2:
-				rounds += 1
-				new_cpf += '.'
-			else:
-				new_cpf += '-'
-			count = 0
 
-	return new_cpf
+	return f'{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}'
