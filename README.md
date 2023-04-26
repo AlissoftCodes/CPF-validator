@@ -1,4 +1,4 @@
-# CPF-validator
+# CPF-Module
 Este é um script simples para validação e formatação de CPF.
 This is a simple script to validate and format CPF (Brazilian ID number).
 
@@ -7,7 +7,7 @@ This is a simple script to validate and format CPF (Brazilian ID number).
 
 <pre>
 <code>
-from cpf_validator import *
+from cpf_module import *
 
 cpf = input('Type a CPF: ')
 
